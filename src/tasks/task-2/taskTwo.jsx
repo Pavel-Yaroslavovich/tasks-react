@@ -1,7 +1,12 @@
 import React from "react";
 
+
 function TaskTwo() {
-	const [value, setValue] = React.useState()
+	const [text, setText] = React.useState()
+
+	function handleChange(event) {
+		setText(event.target.value)
+	}
 
 	return (
 		<div className='task'>
@@ -9,8 +14,8 @@ function TaskTwo() {
 			<p className='text'>Написать компонент в котором будет отрисовываться два инпута,
 				один из которых будет задизейблен, при изменений инпута который не задизейблен,
 				должно обновлятся значение двух инпутов</p>
-			<input value={value} type="text" disabled /><br />
-			<input value={value} type="text" onChange={event => setValue(event.target.value)} />
+			<input type="text" onChange={handleChange} /><br />
+			<input value={text} type="text" disabled />
 		</div>
 	)
 }
