@@ -4,7 +4,7 @@ function InpText({ text }) {
 		<div>
 			<p>{text}</p>
 			<div>
-				'sdljfhsdkjfskdjfh'
+				'Hello'
 			</div>
 		</div>
 	)
