@@ -16,7 +16,7 @@ const TimeSec = () => {
 
 	return (
 		<div>
-			<p>{currentCount}</p>
+			<span>{currentCount}</span>
 		</div>
 	)
 }
