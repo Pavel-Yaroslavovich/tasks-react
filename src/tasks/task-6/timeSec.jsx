@@ -1,22 +1,18 @@
 import React, { useState, useEffect } from "react";
 
 const TimeSec = () => {
-	const [currentCount, setCount] = useState(0);
-	const timer = () => setCount(currentCount + 1);
+	const [count, setCount] = useState(0);
 
-	useEffect(
-		() => {
-			if (currentCount >= 10) {
-				return;
-			}
-			const id = setInterval(timer, 1000);
-			return () => clearInterval(id);
-		},
-	);
+	useEffect(() => {
+		setTimeout(() => {
+			setCount(count + 1)
+		}, 1000)
+	}, [count])
 
 	return (
 		<div>
-			<span>{currentCount}</span>
+			<button>time</button><br /><br />
+			<span>{count}</span>
 		</div>
 	)
 }
