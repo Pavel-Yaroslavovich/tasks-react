@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const TimeSec = () => {
+const Time = () => {
 	const [count, setCount] = useState(0);
 
 	useEffect(() => {
@@ -11,9 +11,10 @@ const TimeSec = () => {
 
 	return (
 		<div>
+			<button>time</button><br /><br />
 			<span>{count}</span>
 		</div>
 	)
 }
 
-export default TimeSec;
+export default Time;
