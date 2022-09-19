@@ -17,13 +17,13 @@ const Time = () => {
 	useEffect(() => {
 		let interval = null;
 		if (isActive) {
-			interval = setInterval(() => {
+			interval = setTimeout(() => {
 				setSeconds(seconds => seconds + 1);
 			}, 1000);
 		} else if (!isActive && seconds !== 0) {
-			clearInterval(interval);
+			clearTimeout(interval);
 		}
-		return () => clearInterval(interval);
+		return () => clearTimeout(interval);
 	}, [isActive, seconds]);
 
 	return (
