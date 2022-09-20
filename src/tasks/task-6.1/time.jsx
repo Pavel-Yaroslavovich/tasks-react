@@ -5,11 +5,11 @@ const Time = () => {
 	const [isActive, setIsActive] = useState(false);
 
 
-	function toggle() {
-		setIsActive(!isActive);
+	const start = () => {
+		setIsActive(true);
 	}
 
-	function reset() {
+	const reset = () => {
 		setSeconds(0);
 		setIsActive(false);
 	}
@@ -28,7 +28,7 @@ const Time = () => {
 
 	return (
 		<div>
-			<button onClick={toggle}>start</button>&nbsp;&nbsp;
+			<button onClick={start}>start</button>&nbsp;&nbsp;
 			<button onClick={reset}>stop</button>
 			<p>{seconds}.s</p>
 		</div>
