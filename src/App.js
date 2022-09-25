@@ -8,6 +8,7 @@ import TaskFour from './tasks/task-4/taskFour';
 import TaskFive from './tasks/task-5/taskFive';
 import TaskSix from './tasks/task-6/taskSix';
 import TaskSixOne from './tasks/task-6.1/taskSixOne';
+import TaskSixTwo from './tasks/task-6.2/taskSixTwo';
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 			<TaskFive />
 			<TaskSix />
 			<TaskSixOne />
+			<TaskSixTwo />
 		</div>
 	);
 }
