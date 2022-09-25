@@ -32,7 +32,7 @@ const Time = () => {
 
 	return (
 		<div>
-			<input type="number" onChange={handlChange} disabled={(isActive) ? true : false} /> &nbsp;&nbsp;
+			<input type="number" onChange={handlChange} disabled={isActive} /> &nbsp;&nbsp;
 			<button onClick={start}>start</button>&nbsp;&nbsp;
 			<button onClick={reset}>stop</button>
 			<p>Start: {seconds}</p>
