@@ -4,22 +4,20 @@ import { getData } from "./utils";
 import Spinner from "./spinner";
 
 const Table = () => {
-  const [value, setValue] = useState()
+  const [users, setUsers] = useState()
 
   useEffect(() => {
     getData().then((obj) => {
-      let dan = JSON.parse(obj);
-      setValue(dan);
+      setUsers(JSON.parse(obj));
     });
   }, []);
-  
+
   let elem;
 
-  if (value === undefined) {
-   elem = <Spinner />
-  } 
-  else if(value) {
-    elem = value.map((item,index) => {
+  if (users === undefined) {
+    elem = <Spinner />
+  } else if(users) {
+    elem = users.map((item, index) => {
       return <tr key={index}>
         <td>{item.name}</td>
         <td>{item.lastName}</td>
