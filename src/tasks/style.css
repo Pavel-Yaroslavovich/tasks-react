@@ -11,3 +11,8 @@
 	margin-bottom: 40px;
 }
 
+.loading {
+  background: url(./task-7/Hourglass.gif) no-repeat center center;
+  width: 100px;
+  height: 100px;
+}

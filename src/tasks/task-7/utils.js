@@ -34,5 +34,5 @@ const json = [
 export const getData = () => new Promise((resolve) => {
     setTimeout(() => {
         resolve(JSON.stringify(json))
-    }, 1000)
+    }, 5000)
 })
