@@ -5,15 +5,18 @@ import Spinner from "./spinner";
 
 const Table = () => {
   const [users, setUsers] = useState()
-
+  const [showResults, setShowResults] = useState(false)
+  const clickShow = () => setShowResults(true)
+  
   useEffect(() => {
-    getData().then((obj) => {
+    if(showResults) {
+      getData().then((obj) => {
       setUsers(JSON.parse(obj));
     });
-  }, []);
-
+  } 
+  }, [showResults]);
+  
   let elem;
-
   if (users === undefined) {
     elem = <Spinner />
   } else if(users) {
@@ -25,9 +28,8 @@ const Table = () => {
         <td>{item.workPlace}</td>
       </tr>
     })
-  }
-
-  return (
+}
+  const Results = () => (
     <div>
       <table className="tableOne" style={{ border: '1px solid black' }}>
         <tbody>
@@ -40,6 +42,13 @@ const Table = () => {
           {elem}
         </tbody>
       </table>
+    </div>
+  )
+
+  return (
+    <div>
+      <button onClick={clickShow}>Показать таблицу</button><br />
+      { showResults ? <Results /> : null }
     </div>
   )
 }
