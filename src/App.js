@@ -9,20 +9,22 @@ import TaskFive from './tasks/task-5/taskFive';
 import TaskSix from './tasks/task-6/taskSix';
 import TaskSixOne from './tasks/task-6.1/taskSixOne';
 import TaskSixTwo from './tasks/task-6.2/taskSixTwo';
+import TaskSeven from './tasks/task-7/taskSeven';
 
 function App() {
-	return (
-		<div className="App">
-			<TaskOne />
-			<TaskTwo />
-			<TaskThree />
-			<TaskFour />
-			<TaskFive />
-			<TaskSix />
-			<TaskSixOne />
-			<TaskSixTwo />
-		</div>
-	);
+  return (
+    <div className="App">
+      <TaskOne />
+      <TaskTwo />
+      <TaskThree />
+      <TaskFour />
+      <TaskFive />
+      <TaskSix />
+      <TaskSixOne />
+      <TaskSixTwo />
+      <TaskSeven />
+    </div>
+  );
 }
 
 export default App;
